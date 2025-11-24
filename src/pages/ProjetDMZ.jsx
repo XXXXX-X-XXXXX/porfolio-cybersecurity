@@ -6,7 +6,8 @@ export default function ProjetDMZ() {
   const [md, setMd] = useState("");
 
   useEffect(() => {
-    fetch("/tp-08-dmz.md")
+    // Correction du chemin pour Vite avec sous-dossier (base)
+    fetch(`${import.meta.env.BASE_URL}tp-08-dmz.md`)
       .then(res => res.text())
       .then(setMd);
   }, []);

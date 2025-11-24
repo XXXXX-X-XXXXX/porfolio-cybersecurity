@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 import CommentsSection from "../components/CommentsSection";
 
+const prefix = import.meta.env.BASE_URL;
+
 const socials = [
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/martin-desbans-704a0b383", icon: "/icons/linkdin.png" },
-  { name: "GitHub", url: "https://github.com/XXXXX-X-XXXXX", icon: "/icons/github.png" },
-  { name: "Instagram", url: "https://www.instagram.com/martin___dbs/", icon: "/icons/insta.png" },
-  { name: "Email", url: "mailto:martin.desbans@ynov.com", icon: "/icons/mail.png" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/martin-desbans-704a0b383", icon: `${prefix}icons/linkdin.png` },
+  { name: "GitHub", url: "https://github.com/XXXXX-X-XXXXX", icon: `${prefix}icons/github.png` },
+  { name: "Instagram", url: "https://www.instagram.com/martin___dbs/", icon: `${prefix}icons/insta.png` },
+  { name: "Email", url: "mailto:martin.desbans@ynov.com", icon: `${prefix}icons/mail.png` },
 ];
 
 export default function Contact() {

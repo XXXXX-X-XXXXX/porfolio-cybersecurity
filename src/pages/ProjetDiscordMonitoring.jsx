@@ -5,7 +5,8 @@ export default function ProjetDiscordMonitoring() {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch("/TPdiscord.md")
+    // Utilise import.meta.env.BASE_URL pour le chemin du markdown !
+    fetch(`${import.meta.env.BASE_URL}TPdiscord.md`)
       .then(res => res.text())
       .then(text => setContent(text));
   }, []);

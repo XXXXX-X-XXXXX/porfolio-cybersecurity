@@ -1,14 +1,17 @@
 import { motion } from "framer-motion";
 
+// On crée un helper pour préfixer les chemins d'images
+const prefix = import.meta.env.BASE_URL;
+
 const skills = [
-  { name: "Wireshark", img: "/logo/wireshark1.png" },
-  { name: "Linux", img: "/logo/linux.png" },
-  { name: "JohnTheRipper", img: "/logo/john.png" },
-  { name: "Nmap", img: "/logo/nmap.webp" },
-  { name: "Burp Suite", img: "/logo/burpsuite.png" },
-  { name: "Metasploit", img: "/logo/metasploit.png" },
-  { name: "VS Code", img: "/logo/vscode.png" },
-  { name: "Réseaux", img: "/logo/reseaux.png" },
+  { name: "Wireshark", img: `${prefix}logo/wireshark1.png` },
+  { name: "Linux", img: `${prefix}logo/linux.png` },
+  { name: "JohnTheRipper", img: `${prefix}logo/john.png` },
+  { name: "Nmap", img: `${prefix}logo/nmap.webp` },
+  { name: "Burp Suite", img: `${prefix}logo/burpsuite.png` },
+  { name: "Metasploit", img: `${prefix}logo/metasploit.png` },
+  { name: "VS Code", img: `${prefix}logo/vscode.png` },
+  { name: "Réseaux", img: `${prefix}logo/reseaux.png` },
   // Ajoute tes autres logos ici !
 ];
 
@@ -32,7 +35,7 @@ export default function Skills() {
         Skills
       </motion.h2>
       
-      {/* Grid des skills tech (anim vague à l'entrée, effet glow au hover, textes alignés) */}
+      {/* Grid des skills tech */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-7 mt-3 w-full max-w-4xl">
         {skills.map(skill => (
           <motion.div

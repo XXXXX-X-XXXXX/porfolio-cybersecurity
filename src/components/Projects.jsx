@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
+// Préfixe dynamique pour les chemins statiques (dossier public)
+const prefix = import.meta.env.BASE_URL;
+
 const projects = [
   {
     title: "Projet Réseau : DMZ & Pare-feu",
     description: "Réalisation d’un réseau isolé avec DMZ, filtrage et NAT.",
     details: "Infrastructure avec DMZ sécurisée, routage/masquerading, services DMZ, création et tests de règles pare-feu. Exercices sur la segmentation et la protection des flux selon les pratiques pros.",
-    img: "/images/generated-image.png",
+    img: `${prefix}images/generated-image.png`, // <-- modifié
     tags: ["Réseaux", "Firewall", "DMZ"],
     url: "/projet-dmz"
   },
@@ -14,7 +17,7 @@ const projects = [
     title: "Monitoring Sécurité : Alertes Discord",
     description: "Surveillance automatisée de fichiers sensibles et des connexions SSH hors horaires, avec alertes instantanées sur Discord via webhook.",
     details: "TP pratique où des scripts Bash/Python surveillent la lecture de fichiers critiques et les connexions SSH hors horaires. Les alertes s'affichent en live dans un salon Discord pour la réactivité de l'équipe sécurité.",
-    img: "/images/discordproject.png", // Mets ton image ici !
+    img: `${prefix}images/discordproject.png`, // <-- modifié
     tags: ["Sécurité", "Discord", "Linux", "Bash"],
     url: "/projet-discord-monitoring"
   },
@@ -22,7 +25,7 @@ const projects = [
     title: "Portfolio React",
     description: "Développement d’un portfolio responsive, animations modernes.(Portfolio que vous consultez actuellement)",
     details: "Site portfolio réalisé avec React, TailwindCSS, Framer Motion. Design responsive, routing, présentation projets cybersécurité.",
-    img: "/images/portfoliocyber.png",
+    img: `${prefix}images/portfoliocyber.png`, // <-- modifié
     tags: ["React", "UI/UX", "Frontend"],
     url: "#"
   }
